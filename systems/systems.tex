@@ -1,0 +1,71 @@
+\documentclass{beamer}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\cS}{\mathcal{S}}
+
+\begin{document}
+The systems 
+\[
+\begin{array}{llrrrrrrrrrl}
+&&x_1 & - & 2x_2 & - & 7x_3 & = & -1 &&& E_1\\
+&&-x_1 & + & 3x_2 & + & 6x_3 & = & 0 &&& E_2\\
+\text{and}\\
+&&x_1 & - & 2x_2 & - & 7x_3 & = & -1&&&E_1\\
+ &&&  & x_2 & - & x_3 & = &-1&&&E_2+E_1 
+\end{array}
+\]
+have the same solutions:
+
+\bigskip
+Let $\vec{x}=(x_1,x_2,x_3)$.
+\[
+\text{$\vec{x}$ a solution of $E_1$ and $E_2$} \Longrightarrow
+\text{$\vec{x}$ a solution of ($E_1$ and) $E_1+E_2$}.
+\]
+Since $E_1 = (E_1+E_2)-E_2$,
+\[
+\text{$\vec{x}$ a solution of $E_1+E_2$ and $E_2$} \Longrightarrow
+\text{$\vec{x}$ a solution of $E_1$ (and $E_1+E_2$)}
+\]
+
+\frame{
+Similarly, the systems 
+\[
+\begin{array}{llrrrrrrrrrl}
+&&x_1 & - & 2x_2 & - & 7x_3 & = & -1&&&E_1\\
+ &&&  & x_2 & - & x_3 & = &-1&&&E_2+E_1\\
+  \text{and}\\
+&&x_1 &  &  & - & 9x_3 & = & -3&&&E_1+2(E_2+E_1)\\
+ &&&  & x_2 & - & x_3 & = &-1&&&E_2+E_1 
+\end{array}
+\]
+have the same solutions.
+
+\bigskip
+Psychological step: Stop thinking of $x_3$ as a variable. Rather, think of it as a \textbf{parameter}. 
+
+\bigskip
+Distinguish variables and the parameter notationally: Set $t=x_3$. 
+\[
+\begin{array}{llrrrrrrrl}
+&&x_1 &  &  &  = & 9t-3&&&E_1+2(E_2+E_1)\\
+ &&&  & x_2 &  = &t-1&&&E_2+E_1 
+\end{array}
+\]
+Conclusion: $(x_1,x_2,x_3)=(9-3t,t-1,t)$ is a solution \textbf{for all $t$}.
+}
+
+\frame{
+	In particular, the system has \textbf{infinitely many solutions}.
+
+	\bigskip
+	Analyze the above argument: All solutions have the form
+	\[
+	(x_1,x_2,x_3)=(9-3t,t-1,t),\tag{$*$}
+	\]
+	for some $t$.
+
+	\bigskip
+	$(*)$ is called the \textbf{general solution} of the system.
+}
+\end{document}
