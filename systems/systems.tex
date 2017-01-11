@@ -1,9 +1,13 @@
 \documentclass{beamer}
 
+\usetheme{Warsaw}
+
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\cS}{\mathcal{S}}
 
 \begin{document}
+
+\begin{frame}
 The systems 
 \[
 \begin{array}{llrrrrrrrrrl}
@@ -16,19 +20,25 @@ The systems
 \]
 have the same solutions:
 
+\pause
 \bigskip
 Let $\vec{x}=(x_1,x_2,x_3)$.
 \[
 \text{$\vec{x}$ a solution of $E_1$ and $E_2$} \Longrightarrow
 \text{$\vec{x}$ a solution of ($E_1$ and) $E_1+E_2$}.
 \]
-Since $E_1 = (E_1+E_2)-E_2$,
-\[
-\text{$\vec{x}$ a solution of $E_1+E_2$ and $E_2$} \Longrightarrow
-\text{$\vec{x}$ a solution of $E_1$ (and $E_1+E_2$)}
-\]
 
-\frame{
+\pause
+
+Since $E_2 = (E_1+E_2)-E_1$,
+\[
+\text{$\vec{x}$ a solution of $E_1$ and $E_1+E_2$} \Longrightarrow
+\text{$\vec{x}$ a solution of ($E_1$ and) $E_2$}
+\]
+\end{frame}
+
+
+\begin{frame}
 Similarly, the systems 
 \[
 \begin{array}{llrrrrrrrrrl}
@@ -41,10 +51,10 @@ Similarly, the systems
 \]
 have the same solutions.
 
-\bigskip
+\pause\bigskip
 Psychological step: Stop thinking of $x_3$ as a variable. Rather, think of it as a \textbf{parameter}. 
 
-\bigskip
+\pause\bigskip
 Distinguish variables and the parameter notationally: Set $t=x_3$. 
 \[
 \begin{array}{llrrrrrrrl}
@@ -52,20 +62,22 @@ Distinguish variables and the parameter notationally: Set $t=x_3$.
  &&&  & x_2 &  = &t-1&&&E_2+E_1 
 \end{array}
 \]
-Conclusion: $(x_1,x_2,x_3)=(9-3t,t-1,t)$ is a solution \textbf{for all $t$}.
-}
+Conclusion: $(x_1,x_2,x_3)=(9t-3,t-1,t)$ is a solution \textbf{for all $t$}.
+\end{frame}
 
-\frame{
+
+\begin{frame}
+	\pause
 	In particular, the system has \textbf{infinitely many solutions}.
 
-	\bigskip
+	\pause\bigskip
 	Analyze the above argument: All solutions have the form
 	\[
-	(x_1,x_2,x_3)=(9-3t,t-1,t),\tag{$*$}
+	(x_1,x_2,x_3)=(9t-3,t-1,t),\tag{$*$}
 	\]
 	for some $t$.
 
-	\bigskip
+	\pause\bigskip
 	$(*)$ is called the \textbf{general solution} of the system.
-}
+\end{frame}
 \end{document}
